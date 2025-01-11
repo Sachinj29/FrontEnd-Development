@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<body>
+
+<h1>VOTING:-</h1>
+
+<p id="Vote"></p>
+<script>
+
+let age =prompt("Enter Your Age :");
+age = parseInt(age);
+
+if(age<18){
+ document.getElementById("Vote").innerHTML="You are not Eligible for Voting !";
+}
+else{
+ document.getElementById("Vote").innerHTML="You are Eligible for Voting.";
+}
+
+</script>
+</body>
+</html>

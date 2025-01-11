@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Function with Default Parameters:</h1>
+
+<p id="Product"></p>
+
+<script>
+
+function getProduct(a,b=8){
+
+    return a * b;
+};
+
+
+let num1 = 5;
+let num2 = 3;
+let resultWithTwoParams = getProduct(num1, num2);
+
+let resultWithOneParam = getProduct(num1); 
+
+
+
+document.getElementById("Product").innerHTML = 
+    `The product of ${num1} and ${num2} is ${resultWithTwoParams}.<br>` +
+    `The product of ${num1} and the default value is ${resultWithOneParam}.`;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Promise Example</h1>
+
+<h2>Promise with 2-second Timeout</h2>
+
+<p>Wait 2 seconds to see the error message.</p>
+
+<h1 id="demo"></h1>
+
+<script>
+// Create a promise that rejects after 2 seconds
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(new Error('This is an error message'));
+  }, 2000);
+});
+
+// Handle the error using .catch()
+promise
+  .catch(error => {
+    document.getElementById("demo").innerHTML = error.message;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text Content</title>
+</head>
+
+<body>
+
+    <h1 id="myHeading">Original Heading</h1>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+
+        function changeText() {
+           
+            var element = document.getElementById("myHeading");
+
+            
+            element.textContent = "New Heading";
+        }
+
+    </script>
+
+</body>
+</html>

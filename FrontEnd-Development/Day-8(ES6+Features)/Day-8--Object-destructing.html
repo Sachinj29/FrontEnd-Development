@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Object Destructuring</h1>
+
+<br>
+<h2>Extract First and Second Elements:</h2>
+
+<p id="demo"></p>
+
+<script>
+
+  const Book = { 
+    'Name': 'Programming With C',
+    'Author': 'D.R.Kale',
+    'Year': 2020
+}
+
+const { Name, Author } = Book;
+
+let str = `Book Name: ${Name}, Author: ${Author}`;
+
+document.getElementById("demo").innerHTML=str;
+
+</script>
+
+</body>
+</html>

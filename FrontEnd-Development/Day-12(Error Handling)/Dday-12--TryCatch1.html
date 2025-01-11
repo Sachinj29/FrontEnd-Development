@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Error Handling</h2>
+
+<p>Enter two numbers to divide:</p>
+
+<input type="number" id="numerator" placeholder="Numerator">
+<input type="number" id="denominator" placeholder="Denominator">
+<button onclick="performDivision()">Divide</button>
+
+<p id="result"></p>
+
+<script>
+function divideNumbers(numerator, denominator) {
+    try {
+        if (denominator === 0) {
+            throw new Error("Denominator cannot be zero");
+        }
+        return numerator / denominator;
+    } catch (error) {
+        return error.message;
+    }
+}
+
+function performDivision() {
+    const numerator = document.getElementById("numerator").value;
+    const denominator = document.getElementById("denominator").value;
+    
+    const result = divideNumbers(parseFloat(numerator), parseFloat(denominator));
+    document.getElementById("result").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

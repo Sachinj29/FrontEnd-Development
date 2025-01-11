@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Book Information:</h1>
+<p id="bookInfo"></p>
+
+<script>
+
+
+// Define a Book object with title, author, and a method to get book info
+
+
+const Book = {
+    title: "Programming With C",
+    author: "D.R.Kale",
+    getInfo: function() {
+        return `Title: ${this.title}, Author: ${this.author}`;
+    }
+};
+
+
+// Call the method to get the book info
+let bookInfo = Book.getInfo();
+
+
+// Display the book info
+document.getElementById("bookInfo").innerHTML = bookInfo;
+
+
+</script>
+
+</body>
+</html>

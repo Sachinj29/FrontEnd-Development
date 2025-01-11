@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions:</h1>
+<h2>Square</h2>
+
+<p id="Squ"></p>
+
+<script>
+
+
+function Square(num) {
+      
+       return num*num;
+
+    }
+
+
+let num =prompt("Enter the Number :");
+num = parseInt(num);
+
+
+let result = Square(num);
+document.getElementById("Squ").innerHTML = "Square of "+ num +" is " +result;
+
+
+</script>
+
+</body>
+</html>

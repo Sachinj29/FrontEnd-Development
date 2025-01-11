@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Promise Chaining Example</h1>
+
+<h2>Simulating Fetching Data from Server</h2>
+
+<div id="log"></div>
+
+<script>
+function logMessage(message) {
+  const logDiv = document.getElementById("log");
+  logDiv.innerHTML += message + '<br>';
+}
+
+function fetchData(url, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Data from ${url}`);
+    }, delay);
+  });
+}
+
+fetchData('server1.com', 1000)
+  .then(data => {
+    logMessage(data);
+    return fetchData('server2.com', 2000);
+  })
+  .then(data => {
+    logMessage(data);
+    return fetchData('server3.com', 1000);
+  })
+  .then(data => {n
+    logMessage(data);
+  })
+  .catch(error => {
+    logMessage('Error: ' + error.message);
+  });
+</script>
+
+</body>
+</html>

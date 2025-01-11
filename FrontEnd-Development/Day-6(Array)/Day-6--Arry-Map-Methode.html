@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Original Array: </h1>
+<p id="originalArray"></p>
+
+<h1>Doubled Array: </h1>
+<p id="doubledArray"></p>
+
+<script>
+
+
+const Arr = [1, 2, 3, 4, 5];
+
+document.getElementById("originalArray").innerHTML = Arr.join(", ");
+
+const doubledArr = Arr.map(function(num) {
+    return num * 2;
+});
+
+
+document.getElementById("doubledArray").innerHTML = doubledArr.join(", ");
+
+</script>
+
+</body>
+</html>

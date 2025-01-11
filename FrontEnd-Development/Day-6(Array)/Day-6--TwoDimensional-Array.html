@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Two-Dimensional Array: </h1>
+<p id="twoDArray"></p>
+
+<script>
+
+// Create a two-dimensional array
+const twoDArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+// Convert the two-dimensional array to a string for display
+let arrayString = '';
+for (let i = 0; i < twoDArray.length; i++) {
+    arrayString += twoDArray[i].join(", ") + "<br>";
+}
+
+
+// Display the two-dimensional array
+document.getElementById("twoDArray").innerHTML = arrayString;
+
+
+</script>
+
+</body>
+</html>

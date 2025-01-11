@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    
+    <title>Key Event Listeners</title>
+
+
+</head>
+
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+
+    <script>
+        const inputField = document.getElementById('inputField');
+
+        inputField.addEventListener('keydown', (event) => {
+            console.log(`Key down: ${event.key}`);
+        });
+
+
+        inputField.addEventListener('keyup', (event) => {
+            console.log(`Key up: ${event.key}`);
+        });
+
+    </script>
+</body>
+</html>

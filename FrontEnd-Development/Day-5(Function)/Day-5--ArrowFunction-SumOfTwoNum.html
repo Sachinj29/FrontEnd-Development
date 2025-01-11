@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions:</h1><br>
+<h2> Arrow Function :</h2>
+<br>
+<h3>Sum of Two Number : </h3>
+
+<p id="Sum"></p>
+
+<script>
+
+Sum = () => {
+ 
+   return num1+num2;
+ 
+}
+
+
+ 
+let num1 =prompt("Enter the First Number :");
+num1 = parseInt(num1);
+
+let num2 =prompt("Enter the Second Number :");
+num2 = parseInt(num2);
+
+
+
+document.getElementById("Sum").innerHTML = Sum(num1,num2);
+
+
+</script>
+
+</body>
+</html>

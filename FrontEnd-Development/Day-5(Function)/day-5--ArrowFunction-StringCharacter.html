@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions:</h1><br>
+<h2> Arrow Function :</h2>
+<br>
+<h3>String Contain Specific Character : </h3>
+
+<p id="Char"></p>
+
+<script>
+
+Specific = (str,char) => {
+ 
+   return str.includes(char);
+ 
+}
+
+
+let str =prompt("Enter the String :");
+
+let char =prompt("Enter the Specif Character :");
+
+document.getElementById("Char").innerHTML = Specific(str,char);
+
+
+</script>
+
+</body>
+</html>

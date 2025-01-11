@@ -1,0 +1,39 @@
+
+
+
+
+
+
+// _____________________________________________________________________________________
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>Adding a Method</h2>
+
+<p id="demo"></p>
+
+<script>
+
+
+const Book = {
+  Tittle: "Programming With C",
+  Author: "D.R.Kale",
+  Year: 2020,
+};
+
+
+Book.discription = function() {
+  return this.Tittle + " " + this.Author + " " + this.Year;
+};
+
+
+document.getElementById("demo").innerHTML =
+"Book Discription Is :" + Book.discription(); 
+</script>
+
+</body>
+</html>

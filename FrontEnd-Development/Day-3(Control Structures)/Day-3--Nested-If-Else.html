@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<body>
+
+<h1>Gretest Number:-</h1>
+
+<p id="great"></p>
+<script>
+
+let num1 =prompt("Enter First Number :");
+num1 = parseInt(num1);
+
+let num2 =prompt("Enter Second Number :");
+num2 = parseInt(num2);
+
+let num3 =prompt("Enter Third Number :");
+num3 = parseInt(num3);
+
+
+if(num1>num2 && num1>num3){
+ document.getElementById("great").innerHTML=" First Number is a Greater.";
+}
+else if(num2>num1 && num2>num3){
+ document.getElementById("great").innerHTML=" Second Number is a Greater.";
+}
+else{
+  document.getElementById("great").innerHTML=" Third Number is a Greater.";
+}
+
+</script>
+</body>
+</html>

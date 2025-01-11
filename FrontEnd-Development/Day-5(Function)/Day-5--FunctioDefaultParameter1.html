@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Function with Default Parameters:</h1>
+
+<p id="Name"></p>
+
+<script>
+
+function getProduct(str,age=18){
+
+    return str + " " + age;
+};
+
+
+let str = prompt("Enter the Your Name :");
+
+let age = prompt("Enter the Age :");
+age = parseInt(age);
+
+
+let resultWithTwoParams = getProduct(str, age);
+
+let resultWithOneParam = getProduct(str); 
+
+
+
+document.getElementById("Name").innerHTML = 
+    `The Name is ${str} and his Age ${age} <br>` +
+    `The Name is ${str} and the default Age is ${resultWithOneParam}.`;
+</script>
+
+</body>
+</html>

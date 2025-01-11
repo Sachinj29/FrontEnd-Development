@@ -1,0 +1,44 @@
+
+
+
+//_____________________________________________________________________________________________________________
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Book Information:</h1>
+<p id="bookInfo"></p>
+
+<script>
+
+
+
+const Book = {
+    title: "Programming With C",
+    author: "D.R.Kale",
+    year: 2024
+};
+
+
+
+const keys = Object.keys(Book);
+const values = Object.values(Book);
+
+
+// Create a string to display the book information
+let bookInfo = "";
+
+for (let i = 0; i < keys.length; i++) {
+
+    bookInfo += `${keys[i]}: ${values[i]}<br>`;
+}
+
+
+
+document.getElementById("bookInfo").innerHTML = bookInfo;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Higher-Order Function Example</title>
+</head>
+<body>
+
+<h1>Higher-Order Function Example:</h1>
+
+<p id="output"></p>
+
+<script>
+  // Higher-order function that takes a function `fn` and a number `n`, 
+  // and returns a new function that calls `fn` `n` times.
+  function callFunctionNTimes(fn, n) {
+    return function() {
+      for (let i = 0; i < n; i++) {
+        fn();
+      }
+    };
+  }
+
+  // Example function to be called multiple times
+  function sayHello() {
+    console.log('Hello!');
+  }
+
+  // Usage example:
+  // Create a new function that says hello 5 times
+  const sayHelloFiveTimes = callFunctionNTimes(sayHello, 5);
+
+  // Call the new function
+  sayHelloFiveTimes(); // Outputs "Hello!" 5 times to the console
+
+  // Display output in HTML
+  let output = document.getElementById("output");
+
+  // Call the function again to demonstrate the output
+  const sayHelloThreeTimes = callFunctionNTimes(sayHello, 3);
+  let result = "";
+  for (let i = 0; i < 3; i++) {
+    result += "Hello! ";
+  }
+  output.innerHTML = result;
+</script>
+
+</body>
+</html>

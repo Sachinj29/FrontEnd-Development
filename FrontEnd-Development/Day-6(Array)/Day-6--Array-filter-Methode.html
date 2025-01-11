@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Original Array: </h1>
+<p id="originalArray"></p>
+
+<h1>Even Numbers Array: </h1>
+<p id="evenArray"></p>
+
+<script>
+const Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Display the original array
+document.getElementById("originalArray").innerHTML = Arr.join(", ");
+
+// Use the filter method to create a new array with only even numbers
+const evenArr = Arr.filter(function(num) {
+    return num % 2 === 0;
+});
+
+// Display the array with even numbers
+document.getElementById("evenArray").innerHTML = evenArr.join(", ");
+</script>
+
+</body>
+</html>

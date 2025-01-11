@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Book Information:</h1>
+<p id="bookInfo"></p>
+
+<script>
+
+const Book = {
+    title: "Programming With C",
+    author: "D.R.Kale",
+    year: "2020",
+    getInfo: function() {
+        return `Title: ${this.title}, Author: ${this.author}, Year: ${this.year}`;
+    },
+
+    updateYear: function(newYear) {
+        this.year = newYear;
+    }
+};
+
+
+// Call the method to update the book year
+Book.updateYear(2024);
+
+
+let bookInfo = Book.getInfo();
+
+document.getElementById("bookInfo").innerHTML = bookInfo;
+</script>
+
+</body>
+</html>
